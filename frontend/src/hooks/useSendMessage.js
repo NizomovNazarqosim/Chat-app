@@ -14,7 +14,7 @@ const useSendMessage = () => {
 		setLoading(true);
 		try {
 			const token = authUser?.token
-			const a = axios.post(`/api/messages/send/${selectedConversation._id}`, {
+			const a = axios.post(`https://chat-app-0cfl.onrender.com/api/messages/send/${selectedConversation._id}`, {
 					body: {token:token, message:message}
 				}).then((res) =>{
 					console.log(res)

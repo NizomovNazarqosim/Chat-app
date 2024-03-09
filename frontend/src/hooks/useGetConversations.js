@@ -14,7 +14,7 @@ const useGetConversations = () => {
 			try {
 				console.log('ttkktktktkt', authUser)
 				const token = authUser?.token
-				const a = axios.post('/api/users', {
+				const a = axios.post('https://chat-app-0cfl.onrender.com/api/users', {
 					body: {token:token}
 				}).then((res) =>{
 					setConversations(res?.data)

@@ -14,7 +14,7 @@ const useGetMessages = () => {
 			setLoading(true);
 			try {
 				const token = authUser?.token
-				const a = axios.post(`/api/messages/${selectedConversation._id}`, {
+				const a = axios.post(`https://chat-app-0cfl.onrender.com/api/messages/${selectedConversation._id}`, {
 					body: {token:token}
 				}).then((res) =>{
 					setMessages(res.data);
